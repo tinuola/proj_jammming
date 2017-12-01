@@ -1,5 +1,5 @@
 const clientID = '4b337fcb2fc349f1a670f4808b44a525';
-const redirectURI = 'http://localhost:3000/';
+const redirectURI = 'https://jammming-webapp.herokuapp.com/';
 
 let accessToken;
 
@@ -65,7 +65,7 @@ let Spotify = {
               .then(jsonResponse => {
                 //Store playlist ID
                 const playlistId = jsonResponse.id;
-  
+
                 return fetch(
                   `https://api.spotify.com/v1/users/${userId}/playlists/${playlistId}/tracks`,
                   {
